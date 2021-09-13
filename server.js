@@ -19,7 +19,7 @@ app.use(cors());
 app.use("/api/users", userRoutes);
 app.use("/api/customer", customerRoutes);
 
-app.get("/test", (req, res) => res.send("working4"));
+app.get("/test", (req, res) => res.send("working5"));
 
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
