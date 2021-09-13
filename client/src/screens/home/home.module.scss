@@ -1,0 +1,136 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+}
+
+.mainBox {
+  background-color: rgb(239, 240, 245);
+  height: 100%;
+  width: 100%;
+  padding: 12px;
+  padding-top: 80px;
+}
+
+.cardContainer {
+  padding: 30px 20px 30px 30px;
+}
+.loaderPage {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fab {
+  position: fixed;
+  bottom: 40px;
+  right: 50px;
+  height: 70px;
+  width: 70px;
+  background-color: #388e3c;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  &:hover{
+    background-color: #1e7923;
+
+  }
+}
+.fabIcon {
+  height: 35px;
+  width: 35px;
+}
+
+@media screen and (max-width: 640px) {
+  .cardContainer {
+    padding: 20px 10px 20px 20px;
+    h2 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  .fab {
+    height: 60px;
+    width: 60px;
+    bottom: 30px;
+    right: 40px;
+  }
+  .fabIcon {
+    height: 30px;
+    width: 30px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .cardContainer {
+    padding: 10px 5px 10px 10px;
+    h2 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  .fab {
+    height: 50px;
+    width: 50px;
+    bottom: 25px;
+    right: 35px;
+  }
+  .fabIcon {
+    height: 25px;
+    width: 25px;
+  }
+}
+@media screen and (max-width: 330px) {
+  .cardContainer {
+    padding: 5px;
+    h2 {
+      font-size: 16px;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+}
+@media screen and (max-width: 270px) {
+  .cardContainer {
+    padding: 5px;
+    h2 {
+      font-size: 14px;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+}
+
+// 1. Operator (5px + 2rem)
+// 2. Variable ($bg-clr)
+// 3. Nesting
+// 4. mixin
+// 5. Parameter
+
+// $b-clr: rgb(143, 189, 143);
+
+// @mixin flexCenter($justify, $align) {
+//   display: flex;
+//   justify-content: $justify;
+//   align-items: $align;
+// }
+
+// .asdf {
+//   color: red;
+//   background-color: $b-clr;
+//   height: 100vh;
+//   @include flexCenter(center,center);
+//   h2 {
+//     color: rgb(124, 94, 94);
+//     &:hover {
+//       color: red;
+//     }
+//   }
+// }
