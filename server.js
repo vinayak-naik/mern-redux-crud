@@ -6,7 +6,11 @@ import { notFound, errorHandler } from "./src/middleware/errorMiddleware.js";
 import userRoutes from "./src/routes/userRoutes";
 import customerRoutes from "./src/routes/customerRoutes";
 import cors from "cors";
-import path from "path";
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 dotenv.config();
 connectDB();
@@ -19,7 +23,7 @@ app.use(cors());
 app.use("/api/users", userRoutes);
 app.use("/api/customer", customerRoutes);
 
-__dirname = path.resolve();
+
 
 app.get("/test", (req, res) => res.send("working5"));
 
@@ -38,5 +42,5 @@ if (process.env.NODE_ENV === "production") {
 app.use(notFound);
 app.use(errorHandler);
 
-const PORT = process.env.PORT;
-app.listen(PORT, () => console.log(`Server Running at port dev ${PORT}`));
+const PORT = process.env.PORT || 7000;
+app.listen(PORT, () => console.log(`Server Running at port ${PORT}`));
