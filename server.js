@@ -9,7 +9,7 @@ import cors from "cors";
 import path from "path";
 
 dotenv.config();
-// connectDB();
+connectDB();
 
 const app = express();
 
@@ -25,7 +25,7 @@ if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
 
-if (process.env.NODE_ENV == "production") { 
+if (process.env.NODE_ENV === "production") { 
   app.use(express.static("client/build"));
 
   app.get("*", (req, res) => {
