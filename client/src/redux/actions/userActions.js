@@ -42,7 +42,7 @@ export const login = (email, password) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      "http://localhost:7000/api/users/login",
+      "https://evening-reaches-07928.herokuapp.com/api/users/login",
       { email, password },
       config
     );
@@ -76,7 +76,7 @@ export const register = (name, email, password) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      "http://localhost:7000/api/users/",
+      "https://evening-reaches-07928.herokuapp.com/api/users/",
       { name, email, password },
       config
     );

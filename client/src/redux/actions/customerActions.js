@@ -39,7 +39,7 @@ export const listCustomer = () => async (dispatch) => {
     };
 
     const { data } = await axios.get(
-      "http://localhost:7000/api/customer/",
+      "https://evening-reaches-07928.herokuapp.com/api/customer/",
       config
     );
 
@@ -63,7 +63,7 @@ export const customerDetails = (id) => async (dispatch) => {
     dispatch({ type: CUSTOMER_DETAILS_REQUEST });
 
     const { data } = await axios.get(
-      `http://localhost:7000/api/customer/${id}`
+      `https://evening-reaches-07928.herokuapp.com/api/customer/${id}`
     );
 
     dispatch({
@@ -99,7 +99,7 @@ export const createCustomer =
       };
 
       const { data } = await axios.post(
-        `http://localhost:7000/api/customer/`,
+        `https://evening-reaches-07928.herokuapp.com/api/customer/`,
         { name, email, address, balance },
         config
       );
@@ -139,7 +139,7 @@ export const createCustomer =
         },
       };
   
-      await axios.delete(`http://localhost:7000/api/customer/${id}`, config);
+      await axios.delete(`https://evening-reaches-07928.herokuapp.com/api/customer/${id}`, config);
   
       dispatch({
         type: CUSTOMER_DELETE_SUCCESS,
@@ -183,8 +183,8 @@ export const createCustomer =
       };
   
       const { data } = await axios.put(
-        `http://localhost:7000/api/customer/${id}`,
-        // `http://localhost:7000//api/customers/${id}`,
+        `https://evening-reaches-07928.herokuapp.com/api/customer/${id}`,
+        // `https://evening-reaches-07928.herokuapp.com//api/customers/${id}`,
         customer,
         config
       );
