@@ -19,6 +19,8 @@ app.use(cors());
 app.use("/api/users", userRoutes);
 app.use("/api/customer", customerRoutes);
 
+__dirname = path.resolve();
+
 app.get("/test", (req, res) => res.send("working5"));
 
 if (process.env.NODE_ENV === "development") {
