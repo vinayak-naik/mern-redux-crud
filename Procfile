@@ -1,1 +1,1 @@
-web:node --experimental-modules --es-module-specifier-resolution=node server.js
+web:npm start
