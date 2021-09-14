@@ -9,7 +9,7 @@ import cors from "cors";
 import path from "path";
 
 dotenv.config();
-connectDB();
+// connectDB();
 
 const app = express();
 
