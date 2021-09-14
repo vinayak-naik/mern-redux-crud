@@ -6,6 +6,7 @@ import { notFound, errorHandler } from "./src/middleware/errorMiddleware.js";
 import userRoutes from "./src/routes/userRoutes";
 import customerRoutes from "./src/routes/customerRoutes";
 import cors from "cors";
+import path from "path";
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 
@@ -22,7 +23,6 @@ app.use(cors());
 
 app.use("/api/users", userRoutes);
 app.use("/api/customer", customerRoutes);
-
 
 
 app.get("/test", (req, res) => res.send("working5"));
