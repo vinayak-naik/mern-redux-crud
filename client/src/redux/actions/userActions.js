@@ -42,7 +42,7 @@ export const login = (email, password) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      "https://evening-reaches-07928.herokuapp.com/api/users/login",
+      "https://mern-redux-crud.herokuapp.com/api/users/login",
       { email, password },
       config
     );
@@ -76,7 +76,7 @@ export const register = (name, email, password) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      "https://evening-reaches-07928.herokuapp.com/api/users/",
+      "https://mern-redux-crud.herokuapp.com/api/users/",
       { name, email, password },
       config
     );
