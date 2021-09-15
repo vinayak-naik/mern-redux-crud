@@ -25,6 +25,7 @@ const ViewComponent = () => {
 
 useEffect(() => {
   dispatch(customerDetails(params.id))
+  
 }, [open])
 useEffect(() => {
   if (deleteSuccess){

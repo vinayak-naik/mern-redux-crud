@@ -7,11 +7,8 @@ import userRoutes from "./src/routes/userRoutes";
 import customerRoutes from "./src/routes/customerRoutes";
 import cors from "cors";
 import path from "path";
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+import { fileURLToPath } from "url";
+import { dirname } from "path";
 
 dotenv.config();
 connectDB();
@@ -24,15 +21,16 @@ app.use(cors());
 app.use("/api/users", userRoutes);
 app.use("/api/customer", customerRoutes);
 
-
 app.get("/test", (req, res) => res.send("working5"));
 
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
 
-if (process.env.NODE_ENV === "production") { 
+if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
+  const __filename = fileURLToPath(import.meta.url);
+  const __dirname = dirname(__filename);
 
   app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
